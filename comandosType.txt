@@ -1,0 +1,12 @@
+For the adided typesscript on project 
+    - npm i typescript ts-node-dev @types/express -D
+    - For install: npx tsc --init
+    - For converting TS in JS: npx tsc
+
+On packege.json
+    - scripts: 
+        - "ts-node-dev":  for run TS
+        - "--respawn": restart for alterations
+        - "--transpileOnly": for execute TS without correcting the types
+        - "--ignore-watch node_modules src/server.ts": for not observation of node_modules 
+            
