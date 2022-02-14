@@ -9,4 +9,43 @@ On packege.json
         - "--respawn": restart for alterations
         - "--transpileOnly": for execute TS without correcting the types
         - "--ignore-watch node_modules src/server.ts": for not observation of node_modules 
+
+Para separação de códiogos para mandar na produção:
+    - tsconfig:
+        - "outDir": "./dist"
+        - "rootDir": "./src"
+        - rode o build do TS: npx tsc 
+            - Adicione a nova pasta no gitignore
+    -- para usar funções mais recentes do typeScript:
+        -"target": "es2017"
+        - rode o build do TS: npx tsc 
+    -- importação de arquivos js
+        - "allowJs": true
+    -- usar outras funções do ES6:
+        - "lib": ["ES6"]
+    -- remoção de comentários no código:
+        -  "removeComments": true
+
+    -- para utilizar o TypeOrm:
+        - "experimentalDecorators": true
+        - "emitDecoratorMetadata": true
+    -- para substituição de tipagens;
+        -- "typeRoots": [
+                "./node_modules/@types",
+                "./src/@types"
+            ]
+    -- para importar arquivos Json:
+        - "resolveJsonModule": true
+    -- para a criação de importação mais simples:
+        - Saiba nomear para utilizar o recurso
+        -  "paths": {
+                "@controllers/*": ["./src/controllers/*"],
+                "@models/*": ["./src/models/*"],
+                "@views/*": ["./src/views/*"],
+                "@config/*": ["./src/config/*"]
+            }
+    --- É necessário baixar uma bibliotaca para que o ts-node identifique-o 
+        -- npm i tsconfig-paths -D
+        -- Adicione no script, package.json, para executar os paths, ele faz com que o ts-node entenda a leitura desses paths:
+            ---r tsconfig-paths/register
             
