@@ -1,28 +1,19 @@
 Para a configuração do Eslint
 
-- npm i eslint -D
+- yarn add eslint -D
 
 Rode:
-- npx eslint --init
+- yarn eslint --init
 - 3° opção;
 - import e export
 - none these
 - yes
 - Node
 - Use popular styleguide
-- Airbnb
+- Standard
 - json
-- install with npm
-
-Dependencias adicionadas
-
-@typescript-eslint/eslint-plugin@latest 
-
-eslint-config-airbnb-base@latest eslint@^7.32.0 
-
-|| ^8.2.0 eslint-plugin-import@^2.25.2 
-
-@typescript-eslint/parser@latest
+- install with npm : NO
+-- Copie todas as dependencias que ele avisa que necessita, e copie para adiciona-lo com yarn add -D ... antes retire o ESLINT que já havia baixado
 
 - Precisa instalar o Eslint no VScode
 - Adicione no VScode, no seu json, e deixe abilitado

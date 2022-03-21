@@ -7,7 +7,7 @@ On packege.json
     - scripts: 
         - "ts-node-dev":  for run TS
         - "--respawn": restart for alterations
-        - "--transpileOnly": for execute TS without correcting the types
+        - "--transpile-only": for execute TS without correcting the types
         - "--ignore-watch node_modules src/server.ts": for not observation of node_modules 
 
 Para separação de códiogos para mandar na produção:
@@ -45,7 +45,7 @@ Para separação de códiogos para mandar na produção:
                 "@config/*": ["./src/config/*"]
             }
     --- É necessário baixar uma bibliotaca para que o ts-node identifique-o 
-        -- npm i tsconfig-paths -D
+        -- yarn add tsconfig-paths -D
         -- Adicione no script, package.json, para executar os paths, ele faz com que o ts-node entenda a leitura desses paths:
             ---r tsconfig-paths/register
             
