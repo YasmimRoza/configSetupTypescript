@@ -16,6 +16,7 @@ Para separação de códiogos para mandar na produção:
         - "rootDir": "./src"
         - rode o build do TS: npx tsc 
             - Adicione a nova pasta no gitignore
+Para a execução do typescript: 
     -- para usar funções mais recentes do typeScript:
         -"target": "es2017"
         - rode o build do TS: npx tsc 
